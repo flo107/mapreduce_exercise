@@ -44,4 +44,6 @@ for line in sys.stdin:
     # Key is the payment, value is the sales     
     # With a tab (\t) between key and value
     # New line \n means new record
-    sys.stdout.write("{0}\t{1}\n".format(category, sales))
+    subset = ["Computers", "Cameras", "Video Games"]
+    if category in subset:
+	    sys.stdout.write("{0}\t{1}\n".format(category, sales))
